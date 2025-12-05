@@ -16,9 +16,13 @@ public class App
         //each getBeans will get the same single Alien object since default scope is singleton
         //if scope is prototype, obj will be created on demand via getBean and muitiple times
         Alien obj1 = (Alien) context.getBean("alien1");
-        Alien obj2 = (Alien) context.getBean("alien1");
-        //obj1.code();
-        //obj2.code();
+//    	obj1.setAge(21);
+        System.out.println(obj1.getAge());
 
+        //obj1.code();
+//
+//    	Alien obj2 = (Alien) context.getBean("alien1");
+//    	System.out.println(obj2.age);
+//    	//obj2.code();
     }
 }
