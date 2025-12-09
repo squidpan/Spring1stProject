@@ -10,5 +10,7 @@
 
     <bean id="lap1" class="com.squidpan.Laptop">
     </bean>
+    <bean id="lap2" class="com.squidpan.Laptop">
+    </bean>
 
 </beans>
