@@ -5,9 +5,10 @@
 
     <bean id="alien1" class="com.squidpan.Alien">
         <property name="age" value="21"></property>
+        <property name="lap" ref="lap1"></property>
     </bean>
 
-    <bean id="lap" class="com.squidpan.Laptop">
+    <bean id="lap1" class="com.squidpan.Laptop">
     </bean>
 
 </beans>
