@@ -4,8 +4,11 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="alien1" class="com.squidpan.Alien">
-        <property name="age" value="21"></property>
+        <constructor-arg name="lap" ref="lap1" />
+        <constructor-arg name="age" value="21" />
+        <!-- <property name="age" value="21"></property>
         <property name="lap" ref="lap1"></property>
+        -->
     </bean>
 
     <bean id="lap1" class="com.squidpan.Laptop">

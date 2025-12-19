@@ -1,5 +1,7 @@
 package com.squidpan;
 
+import java.beans.ConstructorProperties;
+
 public class Alien {
 
     private int age;
@@ -8,6 +10,11 @@ public class Alien {
 
     public Alien() {
         System.out.println("Object Created");
+    }
+    @ConstructorProperties({"age", "lap"})
+    public Alien(int age, Laptop lap) {
+        this.age = age;
+        this.lap = lap;
     }
 
     public int getAge() {
