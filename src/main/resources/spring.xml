@@ -3,17 +3,17 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="alien1" class="com.squidpan.Alien">
+    <bean id="alien1" class="com.squidpan.Alien" autowire="byType">
 <!--        <constructor-arg name="lap" ref="lap1" />
         <constructor-arg name="age" value="21" />
 -->
         <property name="age" value="21"></property>
-        <property name="com" ref="lap1"></property>
+    <!--    <property name="com" ref="lap1"></property> -->
     </bean>
 
-    <bean id="lap1" class="com.squidpan.Laptop">
-    </bean>
-    <bean id="lap2" class="com.squidpan.Laptop">
+    <!--<bean id="com1" class="com.squidpan.Laptop">
+    </bean> -->
+    <bean id="com" class="com.squidpan.Desktop">
     </bean>
 
 </beans>
