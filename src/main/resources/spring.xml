@@ -8,11 +8,14 @@
         <constructor-arg name="age" value="21" />
 -->
         <property name="age" value="21"></property>
-        <property name="com" ref="com1"></property>
+        <property name="com">
+            <bean id="com1" class="com.squidpan.Laptop" primary="true">
+            </bean>
+        </property>
     </bean>
 
-    <bean id="com1" class="com.squidpan.Laptop" primary="true">
-    </bean>
+    <!-- <bean id="com1" class="com.squidpan.Laptop" primary="true">
+    </bean> -->
     <bean class="com.squidpan.Desktop" lazy-init="true">
     </bean>
 
