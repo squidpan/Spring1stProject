@@ -1,6 +1,8 @@
 package com.squidpan;
 
+import com.squidpan.config.AppConfig;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -11,6 +13,11 @@ public class App
 {
     public static void main( String[] args )
     {
+        ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+
+        Desktop dt = context.getBean(Desktop.class);
+        dt.compile();
+        /*
         //creates all objs in xml - default
         ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
         //each getBeans will get the same single Alien object since default scope is singleton
@@ -20,7 +27,7 @@ public class App
 //    	obj1.setAge(21);
         System.out.println(obj1.getAge());
         obj1.code();
-
+*/
         //Desktop obj = context.getBean(Desktop.class);
 
         //obj1.code();
