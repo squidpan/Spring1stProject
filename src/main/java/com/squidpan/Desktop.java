@@ -1,7 +1,9 @@
 package com.squidpan;
 
 public class Desktop implements Computer {
-    @Override
+    public Desktop() {
+        System.out.println("Desktop object created");
+    }
     public void compile() {
         System.out.println("Compiling using Desktop");
     }

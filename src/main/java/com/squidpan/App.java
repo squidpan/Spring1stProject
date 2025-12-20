@@ -20,6 +20,8 @@ public class App
         System.out.println(obj1.getAge());
         obj1.code();
 
+        Desktop obj = (Desktop) context.getBean("com2");
+
         //obj1.code();
 //
 //    	Alien obj2 = (Alien) context.getBean("alien1");
