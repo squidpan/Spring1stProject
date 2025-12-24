@@ -16,7 +16,10 @@ public class App
         ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 
         //Desktop dt = context.getBean("Beast", Desktop.class);
-        Desktop dt = context.getBean("desktop", Desktop.class);
+        Desktop dt = context.getBean(Desktop.class);
+        dt.compile();
+        //@Scope("prototype") in AppConfig tells Spring to create another Desktop object
+        Desktop dt1 = context.getBean(Desktop.class);
         dt.compile();
         /*
         //creates all objs in xml - default
