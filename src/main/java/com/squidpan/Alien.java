@@ -6,37 +6,40 @@ public class Alien {
 
     private int age;
     //private Laptop lap = new Laptop();
-    private Computer com;
+    private Laptop lap;
+    private int salary;
 
     public Alien() {
-        System.out.println("Alien Object Created");
+        System.out.println("Object Created");
     }
 
-    //@ConstructorProperties({"age", "lap"})
-    //public Alien(int age, Computer com) {
-    //    this.age = age;
-    //    this.com = lap;
-   // }
+    @ConstructorProperties({"age","lap"})
+    public Alien(int age,Laptop lap) {
+        System.out.println("Para Constructor Called");
+        this.age = age;
+        this.lap = lap;
+    }
+
     public int getAge() {
         return age;
     }
 
     public void setAge(int age) {    // Setter Injection
-        //System.out.println("Setter called");
+        System.out.println("Setter called");
         this.age = age;
     }
 
-    public Computer getCom() {
-        return com;
+    public Laptop getLap() {
+        return lap;
     }
 
-    public void setCom(Computer com) {
-        this.com = com;
+    public void setLap(Laptop lap) {
+        this.lap = lap;
     }
 
     public void code() {
         System.out.println("Coding");
-        com.compile();
+        lap.compile();
     }
 
 }
