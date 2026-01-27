@@ -21,7 +21,7 @@ public class App
         obj1.code();
         //Desktop is lazy-init in spring.xml so dont need this here
         //Desktop obj = (Desktop) context.getBean("com2");
-        Desktop obj = context.getBean("com2",Desktop.class);
+        //Desktop obj = context.getBean("com2",Desktop.class);
         /*
         //creates all objs in xml - default
         ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
