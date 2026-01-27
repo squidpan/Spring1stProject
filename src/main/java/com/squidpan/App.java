@@ -3,7 +3,7 @@ package com.squidpan;
 import com.squidpan.config.AppConfig;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;;
 
 /**
  * Hello world!
@@ -18,6 +18,8 @@ public class App
         Alien obj1=(Alien) context.getBean("alien1");
         System.out.println(obj1.getAge());
         obj1.code();
+        //Desktop is lazy-init in spring.xml so dont need this here
+        //Desktop obj = (Desktop) context.getBean("com2");
         /*
         //creates all objs in xml - default
         ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
